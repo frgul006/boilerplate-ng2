@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="flexbox.css" />
+
+</head>
+<body>
+    <header>
+        <div>
+            <h1>flex-and-animations</h1>
+            <h2>Cleaner, easier and faster</h2>
+        </div>
+        <div>
+            <a href="https://github.com/frgul006/flex-and-animations">flex-and-animations on GitHub</a>
+        </div>
+    </header>
+    <main>
+        <article>
+            <div>
+                <h3>The main stuff</h3>
+                <p>
+                    The Holy Grail Layout is a page with a header, footer, and three columns.
+                </p>
+                <ul>
+                    <li>
+                        The center column (main content) should appear first in the HTML source.
+                    </li>
+                    <li>
+                        All columns should be the same height, regardless of which column is actually the tallest.
+                    </li>
+                    <li>
+                        They should have a fluid center with fixed-width sidebars.
+                    </li>
+                </ul>
+                <p>Let's make it happen.</p>
+                <code>
+                    main {<br />
+                    <span class="cb-indent">flex-grow: 1;</span><br />
+                    <span class="cb-indent">display: flex;</span><br />
+                    }<br />
+                    <br />
+                    article {<br />
+                    <span class="cb-indent">flex-grow: 1;</span>
+                    }<br />
+                    <br />
+                    nav, aside {<br />
+                    <span class="cb-indent">flex-grow: 0;</span><br />
+                    <span class="cb-indent">flex-basis: 25rem;</span><br />
+                    <span class="cb-indent">flex-shrink: 0;</span><br />
+                    }<br />
+                    <br />
+                    nav {<br />
+                    <span class="cb-indent">order: -1;</span><br />
+                    }<br />
+                </code>
+                <h4>What's happening here?</h4>
+                <p>
+                    We are starting with telling the main element that aside from being a flex item (which is implied by the flex-grow property) - we want it to be a flex container.
+                </p>
+                <p>Next we are telling the article element (a flex item of main) to take up all the white-space available</p>
+                <p>After that we are telling the nav and aside elements that they should be fixed. Never shrink, never grow. Always be at the specified flex-basis (or width).</p>
+                <h4>Flex-basis???</h4>
+                <p>At this point, you are probably wondering what the hell flex-basis is - and what's wrong with just using width?
+                <p>The short answer is: Nothing! The default value for flex-basis is auto - which is like saying "Just look at my width and figure it out"</p>
+                <h4>So what's the difference?</h4>
+                <p>flex-basis is basically "width before remaining white-space is distributed between flex items".
+                    This means flex-basis is more of a guideline than an actual rule... (Get the reference?)
+                </p>
+                <blockquote>
+                    <p>
+                        "This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword."
+                    </p>
+                    <p>...</p>
+                    <p>
+                        "If set to 0, the extra space around content isn't factored in. If set to auto, the extra space is distributed based on its flex-grow value."
+                    </p>                    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="cb-blockquote-src">- Chris Coyier</a>
+                </blockquote>
+                <h3>
+                    <a href="../Complete/index.html">Get on with it!</a>
+                </h3>
+            </div>
+        </article>
+        <nav>
+            <div>
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="../1/index.html">Step 1</a></li>
+                    <li><a href="../2/index.html">Step 2</a></li>
+                    <li><a href="../3/index.html">Step 3</a></li>
+                    <li><a href="../4/index.html">Step 4</a></li>
+                    <li><a href="../5/index.html">Step 5</a></li>
+                    <li><a href="../6/index.html">Step 6</a></li>
+                    <li><a href="../7/index.html">Step 7</a></li>
+                    <li><a href="../8/index.html">Step 8</a></li>
+                    <li><a href="../9/index.html">Step 9</a></li>
+                    <li><a href="../10/index.html"><b>Step 10</b></a></li>
+                </ul>
+            </div>
+        </nav>
+        <aside>
+            <div>
+                <h3>References</h3>
+                <p>
+                    This demo is based on the <a href="https://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/" target="_blank">holy grail demo</a> from <a href="https://philipwalton.com/" target="_blank">Philip Walton</a>
+                </p>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>Created by Fredrik Gullberg. Source code and examples released under the MIT license</p>
+    </footer>
+</body>
+</html>

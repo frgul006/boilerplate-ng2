@@ -1,0 +1,103 @@
+﻿html {
+    font-size: 10px;
+}
+
+*, :after, :before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.4rem;
+}
+
+header,
+nav, 
+aside {
+    background-color: #F4F3F0;
+    padding: 2.4rem;
+}
+
+nav, 
+aside {
+    border-radius: .4rem;
+}
+
+
+footer {
+    padding: 1.5rem;
+    background: #232323;
+    color: #999;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+a, a:visited {
+    color: #e57e14;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #fabb00;
+    text-decoration: underline;   
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+h3, h4 {
+    color: #597b2c;
+}
+
+nav ul, nav ul li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 2.4rem;
+}
+
+article {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+}
+
+.cb-indent {
+    margin-left: 1.6rem;
+}
+
+code {
+    display: block;
+    padding: 1.6rem;
+    border-radius: .4rem;
+    background-color: #eaeaea;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+blockquote {
+    background-color: #eaeaea;
+    padding: 1.6rem 2rem;
+    margin: 0 0 1.6rem 0;
+    border-radius: 4px;
+}
+
+blockquote:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cb-blockquote-src {
+    float: right;
+}

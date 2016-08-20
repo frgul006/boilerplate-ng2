@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="flexbox.css"/>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>flex-and-animations</h1>
+            <h2>Cleaner, easier and faster</h2>
+        </div>
+        <div>
+            <a href="https://github.com/frgul006/flex-and-animations">flex-and-animations on GitHub</a>
+        </div>
+    </header>
+    <main>
+        <article>
+            <div>
+                <h3>Okay... what just happened?</h3>
+                <p>
+                    There is a property for flex items (direct descendants of elements with display: flex, remember?) called flex-grow.
+                </p>
+                <h4>
+                    flex-grow
+                </h4>
+                <blockquote>
+                    <p>"This defines the ability for a flex item to grow if necessary."</p>
+                    <p>...</p>
+                    <p>
+                        "If all items have flex-grow set to 1, the remaining space in the container will be distributed equally to all children.<br />
+                        If one of the children a value of 2, the remaining space would take up twice as much space as the others (or it will try to, at least)."
+                    </p>
+                    <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" class="cb-blockquote-src">- Chris Coyier</a>
+                </blockquote>
+                <p>The default value of flex-grow is 0 - which is equivalent of saying: "Don't take up more space than you need to."</p>
+                <p>
+                    Remember the structure?
+                </p>
+                <code>
+                    -html<br />
+                    --body (display: flex)<br />
+                    ---header <br />
+                    ---main<br />
+                    ---footer<br />
+                </code>
+                <p>So, the problem was that header, main and footer were all flex-grow: 0. Nothing was taking up that extra space!</p>
+                <p>
+                    By setting flex-grow: 1 on main, we got this: 
+                </p>
+                <code>
+                    -html<br />
+                    --body (display: flex)<br />
+                    ---header <br />
+                    ---main (takes up all extra space)<br />
+                    ---footer<br />
+                </code>
+                <h3>
+                    <a href="../10/index.html">Let's move on</a>
+                </h3>
+            </div>
+        </article>
+        <nav>
+            <div>
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="../1/index.html">Step 1</a></li>
+                    <li><a href="../2/index.html">Step 2</a></li>
+                    <li><a href="../3/index.html">Step 3</a></li>
+                    <li><a href="../4/index.html">Step 4</a></li>
+                    <li><a href="../5/index.html">Step 5</a></li>
+                    <li><a href="../6/index.html">Step 6</a></li>
+                    <li><a href="../7/index.html">Step 7</a></li>
+                    <li><a href="../8/index.html">Step 8</a></li>
+                    <li><a href="../9/index.html"><b>Step 9</b></a></li>
+                </ul>
+            </div>
+        </nav>
+        <aside>
+            <div>
+                <h3>References</h3>
+                <p>
+                    This demo is based on the <a href="https://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/" target="_blank">holy grail demo</a> from <a href="https://philipwalton.com/" target="_blank">Philip Walton</a>
+                </p>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>Created by Fredrik Gullberg. Source code and examples released under the MIT license</p>
+    </footer>
+</body>
+</html>

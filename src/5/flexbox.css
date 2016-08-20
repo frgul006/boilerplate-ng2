@@ -1,0 +1,28 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+}
+
+article {
+    flex-grow: 1;
+}
+
+nav, aside {
+    flex-grow: 0;
+    flex-basis: 25rem;
+    flex-shrink: 0;
+}
+
+nav {
+    order: -1;
+}

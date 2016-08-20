@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="main.css"/>
+
+</head>
+<body>
+    <header>
+        <div>
+            <h1>flex-and-animations</h1>
+            <h2>Cleaner, easier and faster</h2>
+        </div>
+        <div>
+            <a href="https://github.com/frgul006/flex-and-animations">flex-and-animations on GitHub</a>
+        </div>
+    </header>
+    <main>
+        <article>
+            <div>
+                <h3>The markup stuff</h3>
+                <p>
+                    Ok, so we're pretty now! Let's start setting up the right markup.
+                </p>
+                <p>
+                    Right now, this is our structure:
+                </p>
+                <code>
+                    -html<br />
+                    --body<br />
+                    ---header<br />
+                    ---main<br />
+                    ----article<br />
+                </code>
+                <p>Let's make into this: </p>
+                <code>
+                    -html<br />
+                    --body<br />
+                    ---header<br />
+                    ---main<br />
+                    ----article<br />
+                    <b>
+                        ----nav<br />
+                        ----aside<br />
+                        ---footer<br />
+                    </b>
+                </code>
+                <p>This is great but try removing some the text in the F12 Debugger so you don't get a scrollbar.</p>
+                <p>You'll notice that the footer just ends up at wherever the page ends. Let's start by taking care of that and then work our way inwards!</p>
+                <h3>
+                    <a href="../5/index.html">Let's continue...</a>
+                </h3>
+            </div>
+        </article>
+        <nav>
+            <div>
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="../1/index.html">Step 1</a></li>
+                    <li><a href="../2/index.html">Step 2</a></li>
+                    <li><a href="../3/index.html">Step 3</a></li>
+                    <li><a href="../4/index.html"><b>Step 4</b></a></li>
+                </ul>
+            </div>
+        </nav>
+        <aside>
+            <div>
+                <h3>References</h3>
+                <p>
+                    This demo is based on the <a href="https://philipwalton.github.io/solved-by-flexbox/demos/holy-grail/" target="_blank">holy grail demo</a> from <a href="https://philipwalton.com/" target="_blank">Philip Walton</a>
+                </p>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>Created by Fredrik Gullberg. Source code and examples released under the MIT license</p>
+    </footer>
+</body>
+</html>
