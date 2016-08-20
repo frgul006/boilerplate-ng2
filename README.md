@@ -1,2 +1,2 @@
-# boilerplate-ng2
-Boilerplate for Angular 2 SPA
+# flex-and-animations
+Showcase for flexbox and high performance css animations using hardware acceleration
